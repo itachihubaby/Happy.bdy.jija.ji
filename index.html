@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Jija Ji 🎂</title>
+  <style>
+    *{box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    
+    }
+    body{
+          margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
+            margin: 0;
+  background-size: cover;
+  background-position: center;
+          
+        
+       /*animation: changeBg 20s infinite;*/
+    }
+
+@keyframes changeBg {
+  0% {background-image:url(1.jpg);}
+  10% {background-image:url(2.jpg);}
+  30% {background-image:url(3.jpg);}
+  50% {background-image:url(4.jpg);}
+  70% {background-image:url(5.jpg);}
+}
+
+    .music{position:absolute;
+          top:14px;
+          right:14px;
+          width:44px;
+          height:44px;
+          border-radius:50%;
+          background:#0003;
+          color:#fff;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          cursor:pointer;
+    }
+
+    .container{
+      width:92%;
+      max-width:390px;
+      background: transparent;
+      overflow:hidden;
+      backdrop-filter: blur(2px);
+      border-radius:22px;
+      padding:18px;
+      text-align:center;
+      box-shadow:0 0 20px aqua
+       , 0 0 10px aqua inset;
+      animation:pop .6s ease
+    }
+
+    @keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+
+    h2{color:#ff4d6d;margin:6px 0}
+    p{
+      color:#000;
+      font-size:14px;
+      text-shadow: 0 0 10px #FF0202;
+      backdrop-filter: blur(100px);
+    }
+
+    /* WhatsApp-style chat */
+    .chat{background:#f0f0f0;border-radius:14px;padding:10px;height:160px;overflow:hidden;margin:12px 0;text-align:left}
+    .msg{max-width:80%;padding:8px 12px;border-radius:12px;margin:6px 0;font-size:13px}
+    .left{background:#fff}
+    .right{background:#50A859;margin-left:auto}
+
+    /* Slideshow */
+    .carousel{position:relative;margin:10px 0}
+    .carousel img{
+      width:100%;
+      height:190px;
+    object-fit:cover;
+    border-radius:14px;
+    
+    display:none;
+      
+    }
+    .carousel img.active{display:block}
+
+    .caption{
+      font-size:14px;
+      color:#fff;
+      margin-top:6px
+      text-shadow: 0 0 20px #FF0000;
+      backdrop-filter:blur(80px);
+      background :#222;
+      border-radius: 40px;
+    }
+
+    .question{
+      font-size:16px;
+      color:#fff;
+      margin:14px 0;
+      backdrop-filter: blur(40px);
+      text-shadow: 0 0 20px #FF0000ed;
+      background :#222;
+      border-radius: 40px;
+      
+    }
+    .buttons{
+      position:relative;
+      height:56px;
+      
+    }
+    button{padding:10px 22px;border:none;border-radius:22px;color:#fff;cursor:pointer}
+    .yes{background:linear-gradient(135deg,#ff4d6d,#FA99AC)}
+    .no{background:linear-gradient(135deg,#6c63ff,#48c6ef);position:absolute;right:0}
+
+    /* Final */
+    .final{
+      display:none;
+      text-align:center;
+      color:#000000;
+      animation:pop .7s ease;
+      backdrop-filter: blur(2px);
+      
+    }
+    .final h1{
+      font-size:34px
+    }
+
+    .confetti{
+      position:absolute;
+      top:-10px;
+      width:8px;
+      height:14px;
+      opacity:.9;
+      animation:fall 3s linear infinite;
+    }
+    @keyframes fall{
+      to{transform:translateY(120vh) rotate(360deg)}}
+
+    /* QR */
+    .qr{margin-top:12px}
+  </style>
+</head>
+<body id="body">
+  
+
+<div class="music" onclick="toggleMusic()">🎵</div>
+<audio id="bgm" loop>
+  <source src="bdy-song.mp3" type="audio/mpeg">
+</audio>
+<audio id="birthday-song" loop>
+  <source src="bdy-song.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="container" id="box">
+  <h2>🎉 Happy Birthday Jija Ji 🎉</h2>
+  <p>Ek chhota sa game… phir bada surprise 😄</p>
+
+  <!-- Chat -->
+  <div class="chat" id="chat">
+    <div class="msg left">👋 Hello Jija Ji</div>
+    <div class="msg left">Aaj ka din kuch khaas lag raha hai 😏</div>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="carousel" id="carousel">
+    <img class="active" src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.jpg">
+    <img src="8.jpg">
+  </div>
+  <div class="caption" id="caption">Hamari family ke superstar 🌟</div>
+
+  <div class="question" id="question"></div>
+
+  <div class="buttons">
+    <button class="yes" onclick="nextQuestion()">Yes 😄</button>
+    <button class="no" id="noBtn">No 🙈</button>
+  </div>
+</div>
+
+<div class="final" id="final">
+  <h1>🎂 Happy Birthday Jija Ji 🎂</h1>
+  <p>May aapki life hamesha khushiyon se bhari rahe 💖</p>
+  <p>Health, success aur smiles kabhi kam na ho 🌟</p>
+  <p><b>– With lots of love from your family ❤️</b></p>
+
+  <div class="qr">
+    <button <a href="index1.html">secret gifr for you </a>></button>
+
+     
+  </div>
+</div>
+
+<script>
+window.onload = function() {
+  document.getElementById('birthday-song').play();
+}
+alert('HEY DEAR JIJA JI PLEASE READ THE QUESTION AND THEN ANSWER THEM IN YES OR NO')
+const images = ['11.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '1.jpg', '6.jpg'];
+let i = 0;
+
+setInterval(() => {
+  document.getElementById('body').style.backgroundImage = `url(${images[i]})`;
+  i = (i + 1) % images.length;
+}, 4000); 
+  
+
+  const questions=[
+    'Kya aap sabse cool Jija Ji ho? 😎',
+    'Aaj cake aur treat pakki na? 🍰',
+    'Hamesha aise hi smile karte rahoge? 😊',
+    'Final surprise ke liye ready ho? 🎁'
+  ];
+
+  const captions=[
+    'Hamari family ke superstar 🌟',
+    'Always stylish 😎',
+    'Sabke favourite 💖',
+    'Positive vibes only ✨',
+    'Birthday mode ON 🎂',
+    'Smile never fades 😊',
+    'Best Jija Ji ever 🙌',
+    'Today is all yours 🎉'
+  ];
+
+  let index=0;
+  const qEl=document.getElementById('question');
+  const box=document.getElementById('box');
+  const final=document.getElementById('final');
+  const noBtn=document.getElementById('noBtn');
+  const imgs=[...document.querySelectorAll('.carousel img')];
+  const captionEl=document.getElementById('caption');
+  const chat=document.getElementById('chat');
+  const bgm=document.getElementById('bgm');
+
+  qEl.innerText=questions[index];
+
+  function nextQuestion(){
+    index++;
+    rotateImage();
+    addChat();
+    if(index<questions.length){ qEl.innerText=questions[index]; }
+    else{ box.style.display='none'; final.style.display='block'; launchConfetti(); }
+  }
+
+  function rotateImage(){
+    imgs.forEach(i=>i.classList.remove('active'));
+    imgs[index%imgs.length].classList.add('active');
+    captionEl.innerText=captions[index%captions.length];
+  }
+
+  function addChat(){
+    const m=document.createElement('div');
+    m.className='msg right';
+    m.innerText='Yes hi bol sakte hai no to aap  bol nahi sakte😁😜 ';
+    chat.appendChild(m);
+    chat.scrollTop=chat.scrollHeight;
+  }
+
+  noBtn.addEventListener('click',()=>{
+    const x=Math.random()*160; const y=Math.random()*28;
+    noBtn.style.right='auto'; noBtn.style.left=x+'px'; noBtn.style.top=y+'px';
+    setTimeout(()=>{ noBtn.style.left='auto'; noBtn.style.top='0'; noBtn.style.right='0'; },2000);
+  });
+
+  function launchConfetti(){
+    for(let i=0;i<70;i++){
+      const c=document.createElement('div');
+      c.className='confetti';
+      c.style.left=Math.random()*100+'vw';
+      c.style.background=`hsl(${Math.random()*360},80%,60%)`;
+      c.style.animationDuration=2+Math.random()*2+'s';
+      document.body.appendChild(c);
+    }
+  }
+
+  function toggleMusic(){ bgm.paused?bgm.play():bgm.pause(); }
+</script>
+
+</body>
+</html>
