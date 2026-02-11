@@ -148,9 +148,6 @@
 <audio id="bgm" loop>
   <source src="bdy-song.mp3" type="audio/mpeg">
 </audio>
-<audio id="birthday-song" loop>
-  <source src="bdy-song.mp3" type="audio/mpeg">
-</audio>
 
 
 <div class="container" id="box">
@@ -191,16 +188,28 @@
   <p><b>– With lots of love from your family ❤️</b></p>
 
   <div class="qr">
-    <button <a href="index1.html">secret gifr for you </a>></button>
+    
+    <button onclick="window.location.href='index1.html'">Click to Open</button>
+
 
      
   </div>
 </div>
+<audio id="birthday-song" loop>
+  <source src="bdy-song.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-window.onload = function() {
-  document.getElementById('birthday-song').play();
-}
+
+document.addEventListener('click', function() {
+  document.getElementById('bgm').play().catch(function(error) {
+    console.log('Audio play error:', error);
+  });
+}, { once: true });
+</script>
+
+<script>
+
 alert('HEY DEAR JIJA JI PLEASE READ THE QUESTION AND THEN ANSWER THEM IN YES OR NO')
 const images = ['11.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '1.jpg', '6.jpg'];
 let i = 0;
@@ -284,4 +293,5 @@ setInterval(() => {
 </script>
 
 </body>
-</html>
+  </html>
+      
